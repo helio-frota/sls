@@ -9,7 +9,11 @@ int main(void)
 
   while(1) {
     dp = readdir(dirp);
-    if (dp == NULL) break;
+    if (dp == NULL)
+    {
+      puts("Directory reading completed.");
+      break;
+    }
     printf("%s\n", dp->d_name);
   }
 
